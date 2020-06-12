@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "cursed.mixins",
+  "mixins": [
+    "EnderEyeItemMixin",
+    "EndPortalFrameBlockMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

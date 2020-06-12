@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "cursed",
+  "version": "1.0.0",
+  "mixins": ["mixins.cursed.json"],
+  "entrypoints": {
+    "main": [
+      "cursed.biome.Biomes::initialize",
+      "cursed.item.Items::initialize"
+    ]
+  }
+}
