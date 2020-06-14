@@ -13,6 +13,6 @@ public class WonderingWitherRenderer extends MobEntityRenderer<WonderingWitherEn
 
     @Override
     public Identifier getTexture(WonderingWitherEntity entity) {
-        return Cursed.identifier("textures/entity/wondering_wither");
+        return Cursed.identifier("textures/entity/wondering_wither.png");
     }
 }
