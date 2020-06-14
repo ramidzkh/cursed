@@ -11,8 +11,8 @@ java {
 }
 
 dependencies {
-    minecraft("net.minecraft", "minecraft", "1.16-pre4")
-    mappings("net.fabricmc", "yarn", "1.16-pre4+build.1", classifier = "v2")
+    minecraft("net.minecraft", "minecraft", "1.16-pre5")
+    mappings("net.fabricmc", "yarn", "1.16-pre5+build.1", classifier = "v2")
     modCompile("net.fabricmc", "fabric-loader", "0.8.7+build.201")
 
     modImplementation("net.fabricmc.fabric-api", "fabric-api", "0.11.10+build.359-1.16")

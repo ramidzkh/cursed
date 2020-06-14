@@ -7,6 +7,9 @@
     "main": [
       "cursed.biome.Biomes::initialize",
       "cursed.item.Items::initialize"
+    ],
+    "client": [
+      "cursed.client.Client::initialize"
     ]
   }
 }
