@@ -5,7 +5,7 @@ import net.minecraft.entity.boss.WitherEntity;
 import net.minecraft.entity.mob.MobEntityWithAi;
 import net.minecraft.world.World;
 
-public class WonderingWitherEntity extends WitherEntity {
+public class WonderingWitherEntity extends MobEntityWithAi {
 
     public int stage = 1;
 

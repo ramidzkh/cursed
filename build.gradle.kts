@@ -11,9 +11,7 @@ java {
 }
 
 repositories {
-    maven {
-        url = uri("https://jitpack.io")
-    }
+    maven { url = uri("https://jitpack.io") }
     maven { url = uri("https://www.curseforge.com/api/maven") }
     maven { url = uri("https://server.bbkr.space/artifactory/libs-release") }
     maven { url = uri("https://maven.modmuss50.me") }
@@ -28,5 +26,12 @@ dependencies {
     modCompile("net.fabricmc", "fabric-loader", "0.8.7+build.201")
 
     modImplementation("net.fabricmc.fabric-api", "fabric-api", "0.11.10+build.359-1.16")
-    modImplementation("com.github.StellarHorizons", "Galacticraft-Rewoven", "master")
+
+//    modImplementation("io.github.onyxstudios.Cardinal-Components-API:cardinal-components-base:2.4.0-nightly.1.16-pre5")
+//    modImplementation("io.github.onyxstudios.Cardinal-Components-API:cardinal-components-block:2.4.0-nightly.1.16-pre5")
+//    modImplementation("io.github.onyxstudios.Cardinal-Components-API:cardinal-components-item:2.4.0-nightly.1.16-pre5")
+
+    modImplementation("com.github.StellarHorizons", "Galacticraft-Rewoven", "master"){
+        exclude("io.github.onyxstudios")
+    }
 }
