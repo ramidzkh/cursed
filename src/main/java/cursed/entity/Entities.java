@@ -2,7 +2,6 @@ package cursed.entity;
 
 import cursed.Cursed;
 import cursed.entity.ww.WonderingWitherEntity;
-import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
@@ -17,11 +16,10 @@ public interface Entities {
             Cursed.identifier("wondering_wither"),
             FabricEntityTypeBuilder
                     .create(SpawnGroup.MISC, WonderingWitherEntity::new)
-                    .dimensions(EntityDimensions.fixed(0.75f, -3))
-                    .build()
-    );
+                    .dimensions(EntityDimensions.fixed(4f, 4))
+                    .build());
 
-    static void initialize(){
+    static void initialize() {
         FabricDefaultAttributeRegistry.register(WONDERING_WITHER, WonderingWitherEntity.createMobAttributes());
     }
 

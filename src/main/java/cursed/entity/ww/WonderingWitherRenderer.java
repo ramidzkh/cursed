@@ -8,7 +8,7 @@ import net.minecraft.util.Identifier;
 public class WonderingWitherRenderer extends MobEntityRenderer<WonderingWitherEntity, WonderingWitherModel> {
 
     public WonderingWitherRenderer(EntityRenderDispatcher entityRenderDispatcher) {
-        super(entityRenderDispatcher, new WonderingWitherModel(), 0.5f);
+        super(entityRenderDispatcher, new WonderingWitherModel(), 1f);
     }
 
     @Override

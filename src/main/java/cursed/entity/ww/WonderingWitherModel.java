@@ -3,7 +3,6 @@ package cursed.entity.ww;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.EntityModel;
-import net.minecraft.client.render.model.json.ModelTransformation;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.math.MathHelper;
 
@@ -34,39 +33,39 @@ public class WonderingWitherModel extends EntityModel<WonderingWitherEntity> {
         floatersb.setTextureOffset(0, 96).addCuboid(-26.6F, 56.7F, 87.8F, 16.0F, 16.0F, 16.0F, 0.0F, false);
     }
 
-    boolean inverted = false;
-    int aniProgress1 = 0;
-
     @Override
     public void setAngles(WonderingWitherEntity entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
-        if(this.entity == null){
+        if (this.entity == null) {
             this.entity = entity;
-
-        }
-        if(inverted){
-            aniProgress1 = aniProgress1;
-        }else{
-            aniProgress1++;
         }
 
-        if(aniProgress1 > 4){
-            inverted = !inverted;
-        }
-        if(aniProgress1 < -4){
-            inverted = !inverted;
-        }
     }
 
     @Override
     public void render(MatrixStack matrixStack, VertexConsumer buffer, int f, int g, float red, float green, float blue, float alpha) {
         matrixStack.push();
-        float l = MathHelper.sin(((float)entity.age + g) / 10.0F + 1F) * 0.1F + 0.3F;
-        float m = 1;
-        core.render(matrixStack, buffer, f, g);
-        matrixStack.translate(1.5D, l + 0.25F * m, -3D);
-        floatersb.render(matrixStack, buffer, f, g);
-        matrixStack.translate(0.0D, (l + 0.25F * m) * -2, 0.0D);
-        floatersa.render(matrixStack, buffer, f, g);
+        matrixStack.translate(0, -3, 0);
+        if (entity.stage == 1) {
+            float l = MathHelper.sin(((float) entity.age + g) / 10.0F + 1F) * 0.1F + 0.3F;
+            float m = 1;
+            core.render(matrixStack, buffer, f, g);
+            matrixStack.translate(1.5D, l + 0.25F * m, -3D);
+            floatersb.render(matrixStack, buffer, f, g);
+            matrixStack.translate(0.0D, (l + 0.25F * m) * -2, 0.0D);
+            floatersa.render(matrixStack, buffer, f, g);
+        } else {
+            float t = entity.age / 1.9F;
+
+            core.render(matrixStack, buffer, f, g);
+
+            matrixStack.translate(MathHelper.sin(t) + 1.5D, MathHelper.sin(t) * 2, MathHelper.cos(t) - 3);
+            floatersb.render(matrixStack, buffer, f, g);
+            matrixStack.pop();
+            matrixStack.push();
+            matrixStack.translate(MathHelper.sin(-t) + 1.5D, MathHelper.sin(-t) * 2, MathHelper.cos(-t) - 3);
+            floatersa.render(matrixStack, buffer, f, g);
+        }
+
         matrixStack.pop();
     }
 
