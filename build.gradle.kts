@@ -31,7 +31,5 @@ dependencies {
 //    modImplementation("io.github.onyxstudios.Cardinal-Components-API:cardinal-components-block:2.4.0-nightly.1.16-pre5")
 //    modImplementation("io.github.onyxstudios.Cardinal-Components-API:cardinal-components-item:2.4.0-nightly.1.16-pre5")
 
-    modImplementation("com.github.StellarHorizons", "Galacticraft-Rewoven", "master"){
-        exclude("io.github.onyxstudios")
-    }
+    modImplementation("com.github.StellarHorizons", "Galacticraft-Rewoven", "master")
 }

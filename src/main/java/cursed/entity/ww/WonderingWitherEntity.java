@@ -9,7 +9,7 @@ public class WonderingWitherEntity extends MobEntityWithAi {
 
     public int stage = 1;
 
-    public WonderingWitherEntity(EntityType<? extends WitherEntity> entityType, World world) {
+    public WonderingWitherEntity(EntityType<? extends MobEntityWithAi> entityType, World world) {
         super(entityType, world);
     }
 }
