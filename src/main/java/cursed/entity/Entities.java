@@ -17,7 +17,9 @@ public interface Entities {
             FabricEntityTypeBuilder
                     .create(SpawnGroup.MISC, WonderingWitherEntity::new)
                     .dimensions(EntityDimensions.fixed(4f, 4))
-                    .build());
+                    .build()
+    );
+
 
     static void initialize() {
         FabricDefaultAttributeRegistry.register(WONDERING_WITHER, WonderingWitherEntity.createMobAttributes());
