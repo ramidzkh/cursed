@@ -33,6 +33,6 @@ public class WitheredWasteland extends Biome {
                         .music(MusicType.method_27283(SoundEvents.MUSIC_NETHER_SOUL_SAND_VALLEY))
                         .build())
                 .parent(null)
-                .noises(ImmutableList.of(new Biome.MixedNoisePoint(0.0F, -0.5F, 0.0F, 0.0F, 0.0F))));
+                .noises(ImmutableList.of(new Biome.MixedNoisePoint(0.5F, -0.5F, 0.0F, 0.0F, 0.0F))));
     }
 }
