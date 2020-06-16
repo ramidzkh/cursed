@@ -37,7 +37,7 @@ public class WitheredWasteland extends Biome {
                 .effects(new BiomeEffects.Builder()
                         .waterColor(0x3F76E4)
                         .waterFogColor(0x50533)
-                        .fogColor(0x00FF00) // test
+                        .fogColor(0x000000) // test
                         .particleConfig(new BiomeParticleConfig(ParticleTypes.FLAME, 0.00625F))
                         .loopSound(SoundEvents.AMBIENT_BASALT_DELTAS_MOOD)
                         .moodSound(new BiomeMoodSound(SoundEvents.AMBIENT_SOUL_SAND_VALLEY_MOOD, 6000, 8, 2.0D))

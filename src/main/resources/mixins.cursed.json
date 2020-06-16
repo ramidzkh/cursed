@@ -3,7 +3,8 @@
   "package": "cursed.mixins",
   "mixins": [
     "EnderEyeItemMixin",
-    "EndPortalFrameBlockMixin"
+    "EndPortalFrameBlockMixin",
+    "WitherSkeletonEntityMixin"
   ],
   "client": [],
   "injectors": {
