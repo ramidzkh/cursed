@@ -7,7 +7,6 @@
     "main": [
       "cursed.biome.Biomes::initialize",
       "cursed.item.Items::initialize",
-      "cursed.entity.Entities::initialize",
       "cursed.Sounds::initialize"
     ],
     "client": [
