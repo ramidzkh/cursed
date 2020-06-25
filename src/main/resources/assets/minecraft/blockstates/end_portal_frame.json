@@ -47,6 +47,22 @@
     "eye=true,facing=west,unlocked=true": {
       "model": "minecraft:block/end_portal_frame_filled",
       "y": 90
+    },
+
+    "eye=true,facing=east,unlocked=false": {
+      "model": "minecraft:block/end_portal_frame_filled",
+      "y": 270
+    },
+    "eye=true,facing=north,unlocked=false": {
+      "model": "minecraft:block/end_portal_frame_filled",
+      "y": 180
+    },
+    "eye=true,facing=south,unlocked=false": {
+      "model": "minecraft:block/end_portal_frame_filled"
+    },
+    "eye=true,facing=west,unlocked=false": {
+      "model": "minecraft:block/end_portal_frame_filled",
+      "y": 90
     }
   }
 }
