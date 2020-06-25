@@ -1,7 +1,6 @@
 package cursed.biome;
 
 import com.google.common.collect.ImmutableList;
-import cursed.entity.Entities;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.sound.MusicType;
 import net.minecraft.entity.EntityType;
@@ -46,8 +45,7 @@ public class WitheredWasteland extends Biome {
                         .build())
                 .parent(null)
                 .noises(ImmutableList.of(new Biome.MixedNoisePoint(0.5F, -0.5F, 0.0F, 0.0F, 0.0F))));
-        addSpawn(SpawnGroup.MONSTER, new SpawnEntry(Entities.WONDERING_WITHER, 1, 1, 1));
-        addSpawn(SpawnGroup.MONSTER, new SpawnEntry(EntityType.WITHER_SKELETON, 5, 1, 10));
+        addSpawn(SpawnGroup.MONSTER, new SpawnEntry(EntityType.WITHER_SKELETON, 5, 5, 5));
         this.addStructureFeature(DefaultBiomeFeatures.FORTRESS);
         this.addStructureFeature(DefaultBiomeFeatures.NETHER_FOSSIL);
         this.addStructureFeature(DefaultBiomeFeatures.NETHER_RUINED_PORTAL);

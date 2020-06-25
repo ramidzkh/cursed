@@ -3,6 +3,7 @@ package cursed.mixins;
 import cursed.biome.Biomes;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.AbstractSkeletonEntity;
 import net.minecraft.entity.mob.WitherSkeletonEntity;
 import net.minecraft.item.ItemStack;
@@ -41,4 +42,10 @@ public abstract class WitherSkeletonEntityMixin extends AbstractSkeletonEntity {
         }
     }
 
+    @Inject(method = "dropEquipment", at = @At("TAIL"))
+    public void dropEquipment(DamageSource source, int lootingMultiplier, boolean allowDrops, CallbackInfo callbackInfo) {
+        if (world.getBiome(getBlockPos()) == Biomes.WITHERED_WASTELAND) {
+            dropItem(cursed.item.Items.WITHERED_FRAGMENT);
+        }
+    }
 }
